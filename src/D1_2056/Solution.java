@@ -22,9 +22,15 @@ class Solution
 
         for(int i=0;i<T;i++){
             char[] test = arr[i].toCharArray();
-            int month =test[4]-48+test[5]-48;
-            if(days[test[4]-48+test[5]-48])
-            System.out.println(test[1]-48+test[2]-48);
+            int month =(test[4]-48)*10+test[5]-48;
+            int day = (test[6]-48)*10+test[7]-48;
+
+            if(days[month] < day || day == 0 || month == 0){
+                System.out.println("#" + (i+1) + " -1");
+            }else{
+                System.out.println("#" + (i+1) + " " +test[0] +test[1] +test[2] +test[3]+"/" +test[4] +test[5] +"/"+test[6] +test[7]);
+            }
+
         }
 
 
