@@ -23,6 +23,7 @@ class Solution
                    int b = result%10;
                    result /=10;
                    if(!hm.containsKey(b)){
+
                        hm.put(b,1);
                    }
                }
