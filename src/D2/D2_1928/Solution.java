@@ -1,8 +1,9 @@
 package D2.D2_1928;/////////////////////////////////////////////////////////////////////////////////////////////
 
 
-import java.util.HashMap;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.util.Base64;
 
 class Solution
 {
@@ -11,13 +12,11 @@ class Solution
 
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
+        sc.nextLine();
         for(int i=0;i<T;i++){
            String str = sc.nextLine();
-            System.out.println("test" + str);
-
-
-
-
+           byte[] strD = Base64.getDecoder().decode(str);
+              System.out.println("#" + (i+1) +" "+ new String(strD, StandardCharsets.UTF_8));
         }
 
     }
