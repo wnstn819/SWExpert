@@ -15,9 +15,26 @@ class Solution
 
 
         for(int i=0 ;i<T;i++){
-            String[] line = br.readLine().split(" ");
-            System.out.println("AAA"+ line[0]);
-            System.out.println("BBB"+ line[1]);
+            int testCase = Integer.parseInt(br.readLine());
+
+            int lineCount =0;
+            System.out.println("#"+ (i+1));
+            for(int k=0; k<testCase;k++){
+                String[] line = br.readLine().split(" ");
+
+
+
+                for(int j=0;j<Integer.parseInt(line[1]);j++){
+                    System.out.print(line[0]);
+                    lineCount++;
+                    if(lineCount%10 == 0){
+
+                        System.out.println();
+                    }
+                }
+            }
+            System.out.println();
+
 
 
 
