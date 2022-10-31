@@ -6,6 +6,20 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 class Solution {
+
+    public static int arrowSelect(int n){
+        switch (n){
+            case 0:
+            return 1;
+            case 1:
+                return 2;
+            case 2:
+                return 3;
+            case 3:
+                return 0;
+        }
+        return 0;
+    }
     public static void main(String args[]) throws Exception {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -32,20 +46,8 @@ class Solution {
 
                  }else{
 
-                     switch (arrow){
-                         case 0:
-                             arrow=1;
-                             break;
-                         case 1:
-                             arrow=2;
-                             break;
-                         case 2:
-                             arrow=3;
-                             break;
-                         case 3:
-                             arrow=0;
-                             break;
-                     }
+
+                     arrow=arrowSelect(arrow);
                      placeX+=x[arrow];
                      placeY+=y[arrow];
                  }
